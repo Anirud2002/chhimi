@@ -8,6 +8,8 @@ const shortIntro = document.querySelector('.short-intro')
 const burger = document.querySelector('.burger-menu')
 const nav = document.querySelector("nav")
 
+
+console.log("hey")
 gsap.set([ballBg, shortIntro], {opacity: 0})
 
 const introTimeline = new TimelineLite()
@@ -28,12 +30,15 @@ introTimeline
         landingPage.remove()
     }})
 
+
 setTimeout(() => {
     const homePageTimeline = new TimelineLite()
     homePageTimeline
         .fromTo(ballBg, {y: 100, opacity:0}, {duration: 1, y: 0, opacity: 1})
         .fromTo(shortIntro, .7, {opacity: 0}, {opacity: 1})
 }, 8500)
+
+
 
 burger.addEventListener('click', ()  => {
     nav.classList.toggle("show")

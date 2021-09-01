@@ -1,3 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Original+Surfer&family=Over+the+Rainbow&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="./css/contact.css">
+    <title>Chhimi</title>
+</head>
+
+<body>
+    <section id="contact">
+        <header>
+            <div>
+                <img class="logo" src="./imgs/Logo.svg" alt="">
+            </div>
+            <div class="burger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h1>Contact me</h1>
+            <div class="contact-container">
+                <form>
+                    <div class="input-block">
+                        <div class="inputs">
+                            <label for="name">Name:</label>
+                            <input type="text" placeholder="Enter your name..." />
+                        </div>
+                        <div class="inputs">
+                            <label for="name">Email:</label>
+                            <input type="email" placeholder="Enter your email..." />
+                        </div>
+                        <div class="inputs">
+                            <label for="name">Message:</label>
+                            <textarea placeholder="Enter your message..."></textarea>
+                        </div>
+                    </div>
+                    <button type="submit">SEND</button>
+                </form>
+            </div>
+        </main>
+    
+        <footer>
+            <p>All rights reserved 2021.</p>
+        </footer>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineLite.min.js"></script>
+        <script src="./js/contact.js"></script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+/////////////////////////////////////////
+
+
 * {
   margin: 0;
   padding: 0;
@@ -15,6 +94,7 @@ body {
 }
 #contact {
   height: 100vh;
+  width: 100% !important;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -34,7 +114,6 @@ header {
   height: 70px;
   cursor: pointer;
 }
-
 .burger-menu {
   background-color: var(--pink);
   width: 40px;
@@ -58,7 +137,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* transition: 0.5s ease-in; */
+  transition: 0.5s ease-in;
   opacity: 0;
   visibility: hidden;
   transform: translateX(100%);
@@ -78,7 +157,7 @@ nav ul li a {
   font-family: "Original Surfer", sans-serif;
   color: white;
   text-decoration: none;
-  /* transition: 0.3s ease; */
+  transition: 0.3s ease;
 }
 nav ul li a:hover {
   font-size: 25px;
@@ -109,6 +188,7 @@ main {
 main h1 {
   font-size: 36px;
 }
+
 .contact-container {
   position: absolute;
   width: 322px;
@@ -132,7 +212,6 @@ main h1 {
   height: 100%;
   width: 100%;
 }
-
 .input-block {
   width: 100%;
   flex: 0.7;
@@ -160,7 +239,7 @@ textarea {
   padding: 10px;
 }
 
-button {
+form button {
   width: 50px;
   outline: none;
   border-radius: 5px;
@@ -211,3 +290,20 @@ form button:hover {
 }
 @media screen and (max-width: 350px) {
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
