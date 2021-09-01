@@ -1,0 +1,224 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Over the Rainbow", sans-serif;
+  overflow: hidden;
+  --pink: #e790de;
+  --red: #e77373;
+  --blue: #73deb7;
+  --green: #73e7a8;
+  --orange: #d4ca67;
+}
+
+#landing-page-1 {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.circle {
+  height: 100px;
+  width: 100px;
+}
+
+.hey {
+  margin-bottom: 30px;
+}
+
+.welcoming-msg {
+  height: 100px;
+}
+
+#home {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  margin: auto;
+  padding: 10px 20px;
+}
+
+.logo {
+  height: 70px;
+  cursor: pointer;
+}
+.burger-menu {
+  background-color: var(--pink);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  z-index: 10;
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  right: 10%;
+  width: 40%;
+  height: 100vh;
+  background-color: var(--pink);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s ease-in;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(100%);
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  margin: 20px 0px;
+}
+
+nav ul li a {
+  font-size: 30px;
+  font-family: "Original Surfer", sans-serif;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+nav ul li a:hover {
+  font-size: 25px;
+}
+
+nav.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+.balloons {
+  position: relative;
+  width: 700px;
+  height: 80vh;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  z-index: -1;
+}
+
+.ball-bg {
+  margin-top: -100px;
+  width: 700px;
+}
+
+.short-intro {
+  position: absolute;
+  color: white;
+  font-size: 38px;
+  left: 50%;
+  top: 40%;
+  width: 80%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.short-intro span {
+  font-family: "Original Surfer", sans-serif;
+}
+
+footer {
+  margin-bottom: 20px;
+}
+
+footer p {
+  font-family: "Original Surfer", sans-serif;
+  color: black;
+}
+
+@media screen and (max-width: 700px) {
+  nav {
+    right: 0;
+  }
+  .circle {
+    height: 70px;
+    width: 70px;
+  }
+  header {
+    width: 100%;
+  }
+  .logo {
+    height: 50px;
+  }
+  .burger-menu {
+    width: 30px;
+    height: 30px;
+  }
+  .balloons {
+    width: 100%;
+  }
+  .ball-bg {
+    width: 600px;
+  }
+}
+@media screen and (max-width: 675px) {
+  .ball-bg {
+    width: 500px;
+  }
+  .short-intro {
+    width: 60%;
+    font-size: 26px;
+  }
+}
+@media screen and (max-width: 675px) {
+  .ball-bg {
+    width: 450px;
+  }
+}
+@media screen and (max-width: 500px) {
+  nav {
+    width: 100%;
+  }
+  .circle {
+    height: 40px;
+    width: 40px;
+  }
+  .ball-bg {
+    width: 400px;
+  }
+  .short-intro {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 410px) {
+  .ball-bg {
+    width: 350px;
+  }
+  .short-intro {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .ball-bg {
+    width: 290px;
+  }
+}
