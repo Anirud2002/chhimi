@@ -84,8 +84,10 @@ section {
 
 header {
   position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
   top: 0;
-  left: 0;
+
   width: 100%;
   display: flex;
   align-items: center;
@@ -122,7 +124,9 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 0.5s ease-in;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s cubic-bezier(0.91, 0.21, 0.62, 0.95);
   transform: translateX(100%);
 }
 
@@ -147,6 +151,8 @@ nav ul li:hover {
 }
 
 nav.show {
+  opacity: 1;
+  visibility: visible;
   transform: translateX(0);
 }
 
