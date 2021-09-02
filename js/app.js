@@ -8,6 +8,7 @@ const shortIntro = document.querySelector('.short-intro')
 const burger = document.querySelector('.burger-menu')
 const nav = document.querySelector("nav")
 const header = document.querySelector('header')
+const navLinks = document.querySelectorAll('nav ul li a')
 
 
 console.log("hey")
@@ -39,7 +40,13 @@ setTimeout(() => {
         .fromTo(shortIntro, .7, {opacity: 0}, {opacity: 1})
 }, 8500)
 
-
+navLinks.forEach(navLink => {
+    navLink.addEventListener('click', () => {
+        if(nav.classList.contains('show')){
+            nav.classList.remove('show')
+        }
+    })
+})
 
 burger.addEventListener('click', ()  => {
     nav.classList.toggle("show")
