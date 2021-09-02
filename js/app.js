@@ -46,11 +46,10 @@ setTimeout(() => {
 
 navLinks.forEach(navLink => {
     navLink.addEventListener('click', (e) => {
-        let bodyClassName = body.className
         nav.classList.toggle('show')
         burger.innerHTML = '<i class="fas fa-bars"></i>'
+        let bodyClassName = body.className
         if(bodyClassName === e.target.textContent){
-            nav.classList.toggle("show")
             return
         }
         if(e.target.textContent === "HOME"){
