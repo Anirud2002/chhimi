@@ -117,8 +117,8 @@ header {
 nav {
   position: fixed;
   top: 0;
-  right: 10%;
-  width: 40%;
+  right: 0%;
+  width: 300px;
   height: 100vh;
   background-color: var(--pink);
   display: flex;
