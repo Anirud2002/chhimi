@@ -7,6 +7,7 @@ const ballBg = document.querySelector('.ball-bg')
 const shortIntro = document.querySelector('.short-intro')
 const burger = document.querySelector('.burger-menu')
 const nav = document.querySelector("nav")
+const header = document.querySelector('header')
 
 
 console.log("hey")

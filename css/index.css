@@ -6,7 +6,7 @@
 
 body {
   font-family: "Over the Rainbow", sans-serif;
-  overflow: hidden;
+  overflow-x: hidden;
   --pink: #e790de;
   --red: #e77373;
   --blue: #73deb7;
@@ -16,13 +16,15 @@ body {
 
 #landing-page-1 {
   position: relative;
-  inset: 0;
+  top: 0;
+  left: 0;
   z-index: 100;
   height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: white;
 }
 .animating-content {
   position: absolute;
@@ -55,7 +57,10 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 header {
@@ -116,7 +121,7 @@ nav ul li a {
   transition: 0.3s ease;
 }
 nav ul li a:hover {
-  font-size: 25px;
+  transform: translateY(10px);
 }
 
 nav.show {

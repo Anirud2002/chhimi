@@ -18,7 +18,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   background-color: var(--blue);
 }
 
@@ -81,7 +84,7 @@ nav ul li a {
   transition: 0.3s ease;
 }
 nav ul li a:hover {
-  font-size: 25px;
+  transform: translateY(10px);
 }
 
 nav.show {
@@ -140,10 +143,7 @@ main h1 {
   nav {
     right: 0;
   }
-  .circle {
-    height: 70px;
-    width: 70px;
-  }
+
   header {
     width: 100%;
   }
