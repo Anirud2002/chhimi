@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="./css/index.css">
     <title>Chhimi</title>
 </head>
-<body>
-    <section id="landing-page-1">
+<body class="HOME">
+    <div id="landing-page-1">
         <div class="animating-content">
             <h1 class="hey">Hi, I am</h1>
             <div class="circles">
@@ -26,30 +26,73 @@
             <h1 class="welcoming-msg"></h1>
 
         </div>
-    </section>
+    </div>
 
 
-    <main id="home">
-        <header>
-            <div>
-                <img class="logo" src="./imgs/Logo.svg" alt="">
-            </div>
-            <div class="burger-menu">
-                <i class="fas fa-bars"></i>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
-                    <li><a href="contact.html">CONTACT</a></li>
-                </ul>
-            </nav>
-        </header>
-        <div class="balloons">
+    <header>
+        <div>
+            <img class="logo" src="./imgs/Logo.svg" alt="">
+        </div>
+        <div class="burger-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav>
+            <ul>
+                <li>HOME</li>
+                <li>ABOUT</li>
+                <li>CONTACT</li>
+            </ul>
+        </nav>
+    </header>
+    <section id="home" class="sec-active">
+        <main class="balloons">
             <img class="ball-bg" src="./imgs/balls-bg.svg" alt="">
             <p class="short-intro">Hi, my name is <span>Chhmi Sherpa</span>.
             Welcome to my cozy place on internet ...</p>
-        </div>
+        </main>
+        <footer>
+            <p>All rights reserved 2021.</p>
+        </footer>
+    </section>
+
+    <section id="about">
+        <main class="about-main">
+            <h1>About me</h1>
+            <div class="about-container">
+                <img src="./imgs/dp.jpg" alt="" class="my-pic">
+                <p>Hi my name is Chhimi Sherpa. I Live in Kapan. I love desgining...</p>
+            </div>
+        </main>
+    
+        <footer>
+            <p>All rights reserved 2021.</p>
+        </footer>
+    </section>
+
+    <section id="contact">
+        <main class="contact-main">
+            <h1>Contact me</h1>
+            <div class="contact-container">
+                <form>
+                    <div class="input-block">
+                        <div class="inputs">
+                            <label for="name">Name:</label>
+                            <input type="text" placeholder="Enter your name..." />
+                        </div>
+                        <div class="inputs">
+                            <label for="name">Email:</label>
+                            <input type="email" placeholder="Enter your email..." />
+                        </div>
+                        <div class="inputs">
+                            <label for="name">Message:</label>
+                            <textarea placeholder="Enter your message..."></textarea>
+                        </div>
+                    </div>
+                    <button type="submit">SEND</button>
+                </form>
+            </div>
+        </main>
+    
         <footer>
             <p>All rights reserved 2021.</p>
         </footer>

@@ -12,6 +12,29 @@ body {
   --blue: #73deb7;
   --green: #73e7a8;
   --orange: #d4ca67;
+  transition: 0.3s ease all;
+}
+body.ABOUT {
+  background-color: var(--blue);
+}
+body.CONTACT {
+  background-color: var(--red);
+}
+
+section {
+  transform: translateX(100%);
+  transition: 0.5s ease-in-out;
+  z-index: -1;
+  height: 90vh;
+  margin-top: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.sec-active {
+  transform: translateX(0);
 }
 
 #landing-page-1 {
@@ -26,6 +49,7 @@ body {
   align-items: center;
   background-color: white;
 }
+
 .animating-content {
   position: absolute;
   left: 50%;
@@ -52,18 +76,17 @@ body {
 }
 
 #home {
-  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+}
+
+header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-}
-
-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -90,7 +113,7 @@ header {
 }
 
 nav {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 10%;
   width: 40%;
@@ -100,8 +123,6 @@ nav {
   justify-content: center;
   align-items: center;
   transition: 0.5s ease-in;
-  opacity: 0;
-  visibility: hidden;
   transform: translateX(100%);
 }
 
@@ -113,20 +134,19 @@ nav ul li {
   margin: 20px 0px;
 }
 
-nav ul li a {
+nav ul li {
   font-size: 30px;
   font-family: "Original Surfer", sans-serif;
   color: white;
   text-decoration: none;
   transition: 0.3s ease;
+  cursor: pointer;
 }
-nav ul li a:hover {
+nav ul li:hover {
   transform: translateY(10px);
 }
 
 nav.show {
-  opacity: 1;
-  visibility: visible;
   transform: translateX(0);
 }
 
@@ -167,6 +187,158 @@ footer {
 footer p {
   font-family: "Original Surfer", sans-serif;
   color: black;
+}
+
+/* //////////////////////// About page /////////////////////////////// */
+#about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Original Surfer", sans-serif;
+}
+
+.about-main {
+  text-align: center;
+  height: 80vh;
+  color: white;
+  position: relative;
+}
+
+.about-main h1 {
+  font-size: 36px;
+}
+.about-container {
+  position: absolute;
+  padding: 10px 15px;
+  width: 322px;
+  height: 328px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: var(--red);
+  left: 50%;
+  top: 20%;
+  border-radius: 10px;
+  transform: translateX(-50%);
+  box-shadow: 5px 8px 8px 3px rgba(0, 0, 0, 0.25);
+}
+
+.about-container p {
+  font-size: 22px;
+}
+.my-pic {
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+#about footer {
+  margin-bottom: 20px;
+}
+
+#about footer p {
+  font-family: "Original Surfer", sans-serif;
+  color: white;
+}
+
+/* //////////////////////// Contact page /////////////////////// */
+#contact {
+  font-family: "Original Surfer", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact-main {
+  text-align: center;
+  height: 80vh;
+  color: white;
+  position: relative;
+}
+
+.contact-main h1 {
+  font-size: 36px;
+}
+.contact-container {
+  position: absolute;
+  width: 322px;
+  height: 328px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--blue);
+  left: 50%;
+  top: 20%;
+  border-radius: 10px;
+  transform: translateX(-50%);
+  box-shadow: 5px 8px 8px 3px rgba(0, 0, 0, 0.25);
+}
+
+.contact-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.input-block {
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+.inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 10px;
+}
+.inputs label {
+  color: black;
+}
+.inputs input,
+textarea {
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  color: gray;
+  padding: 10px;
+}
+
+button {
+  width: 50px;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  display: flex;
+  font-family: "Original Surfer", sans-serif;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+  background-color: var(--orange);
+  margin-top: 20px;
+  transition: 0.5s ease;
+}
+.contact-container form button:hover {
+  transform: translateY(7px);
+}
+
+#contact footer {
+  margin-bottom: 20px;
+}
+
+#contact footer p {
+  font-family: "Original Surfer", sans-serif;
+  color: white;
 }
 
 @media screen and (max-width: 700px) {

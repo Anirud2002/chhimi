@@ -1,3 +1,7 @@
+const body = document.querySelector('body')
+const home = document.querySelector('#home')
+const about = document.querySelector('#about')
+const contact = document.querySelector('#contact')
 const landingPage = document.querySelector('#landing-page-1')
 const circles = document.querySelector('.circles')
 const heyMsg = document.querySelector('.hey')
@@ -8,10 +12,9 @@ const shortIntro = document.querySelector('.short-intro')
 const burger = document.querySelector('.burger-menu')
 const nav = document.querySelector("nav")
 const header = document.querySelector('header')
-const navLinks = document.querySelectorAll('nav ul li a')
+const navLinks = document.querySelectorAll('nav ul li')
 
-
-console.log("hey")
+console.log(nav)
 gsap.set([ballBg, shortIntro], {opacity: 0})
 
 const introTimeline = new TimelineLite()
@@ -40,13 +43,36 @@ setTimeout(() => {
         .fromTo(shortIntro, .7, {opacity: 0}, {opacity: 1})
 }, 8500)
 
+
 navLinks.forEach(navLink => {
-    navLink.addEventListener('click', () => {
-        if(nav.classList.contains('show')){
-            nav.classList.remove('show')
+    navLink.addEventListener('click', (e) => {
+        let bodyClassName = body.className
+        nav.classList.toggle('show')
+        burger.innerHTML = '<i class="fas fa-bars"></i>'
+        if(bodyClassName === e.target.textContent){
+            nav.classList.toggle("show")
+            return
+        }
+        if(e.target.textContent === "HOME"){
+            body.className = "HOME"
+            about.classList.remove('sec-active')
+            contact.classList.remove('sec-active')
+            home.classList.add('sec-active')
+        }
+        if(e.target.textContent === "ABOUT"){
+            body.className = "ABOUT"
+            home.classList.remove('sec-active')
+            contact.classList.remove('sec-active')
+            about.classList.add('sec-active')
+        }
+        if(e.target.textContent === "CONTACT"){
+            body.className = "CONTACT"
+            home.classList.remove('sec-active')
+            about.classList.remove('sec-active')
+            contact.classList.add('sec-active')
         }
     })
-})
+}) 
 
 burger.addEventListener('click', ()  => {
     nav.classList.toggle("show")
