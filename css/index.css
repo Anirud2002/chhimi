@@ -31,6 +31,9 @@ section {
   top: 0;
   left: 0;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .sec-active {
@@ -76,10 +79,13 @@ section {
 }
 
 #home {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+}
+
+footer {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 header {
@@ -160,14 +166,13 @@ nav.show {
   position: relative;
   width: 700px;
   height: 80vh;
-  margin: auto;
   display: flex;
   justify-content: center;
+  align-items: center;
   z-index: -1;
 }
 
 .ball-bg {
-  margin-top: -100px;
   width: 700px;
 }
 
@@ -176,7 +181,7 @@ nav.show {
   color: white;
   font-size: 38px;
   left: 50%;
-  top: 40%;
+  top: 50%;
   width: 80%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -197,37 +202,35 @@ footer p {
 
 /* //////////////////////// About page /////////////////////////////// */
 #about {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
   font-family: "Original Surfer", sans-serif;
 }
 
 .about-main {
   text-align: center;
   height: 80vh;
+  width: 100%;
   color: white;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .about-main h1 {
   font-size: 36px;
 }
 .about-container {
-  position: absolute;
   padding: 10px 15px;
   width: 322px;
   height: 328px;
+  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
   background-color: var(--red);
-  left: 50%;
-  top: 20%;
   border-radius: 10px;
-  transform: translateX(-50%);
   box-shadow: 5px 8px 8px 3px rgba(0, 0, 0, 0.25);
 }
 
@@ -253,10 +256,6 @@ footer p {
 /* //////////////////////// Contact page /////////////////////// */
 #contact {
   font-family: "Original Surfer", sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
 }
 
 .contact-main {
@@ -264,23 +263,24 @@ footer p {
   height: 80vh;
   color: white;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .contact-main h1 {
   font-size: 36px;
 }
 .contact-container {
-  position: absolute;
   width: 322px;
   height: 328px;
+  margin: auto;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: var(--blue);
-  left: 50%;
-  top: 20%;
   border-radius: 10px;
-  transform: translateX(-50%);
   box-shadow: 5px 8px 8px 3px rgba(0, 0, 0, 0.25);
 }
 
@@ -384,6 +384,11 @@ button {
 @media screen and (max-width: 675px) {
   .ball-bg {
     width: 450px;
+  }
+}
+@media screen and (max-width: 675px) {
+  .short-intro {
+    top: 45%;
   }
 }
 @media screen and (max-width: 500px) {
