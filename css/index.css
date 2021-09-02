@@ -6,7 +6,7 @@
 
 body {
   font-family: "Over the Rainbow", sans-serif;
-  overflow-x: hidden;
+  overflow: hidden;
   --pink: #e790de;
   --red: #e77373;
   --blue: #73deb7;
